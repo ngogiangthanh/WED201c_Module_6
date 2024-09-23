@@ -68,7 +68,6 @@ main {
     padding: 10px 10px 60px 10px;
 }
 
-
 /* Basic styling for Footer */
 footer {
     background-color: #f0f0f0; /* Light gray background */
@@ -104,7 +103,6 @@ p {
 }
 
 .grid-index p {
-    font-family: 'Georgia', serif; /* Use a serif font for a classic look */
     font-size: 18px;
     text-align: center;
     color: #333; /* Dark gray text color */
@@ -115,37 +113,45 @@ p {
     border: 3px dashed #dddd8d;
     padding: 10px;
     background: #ececca;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center; /* Center content horizontally */
 }
 
 #about_me h2 {
     text-align: center;
-    font-family: 'Pacifico', cursive;
     font-size: 2em;
     color: #000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
 }
 
-/* Hover effect on the unordered list */
-#about_me ul:hover {
-    transform: scale(1.05); /* Slightly enlarge the list on hover */
-    transition: transform 0.3s ease; /* Add a smooth transition */
+.about-me-content {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    align-items: center;
+    gap: 20px; /* Add spacing between image and text */
 }
 
-/* nth-child selector to style every other list item */
-#about_me ul li:nth-child(odd) {
-    font-family: 'Georgia', serif; /* Use a serif font for a classic look */
-    color: #333;
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fills the circular area */
+    border: 3px solid #dddd8d; /* Add a border to the image */
 }
 
-/* nth-child selector to style every other list item */
-#about_me ul li:nth-child(even) {
-    font-family: 'Pacifico', cursive; /* Use a serif font for a classic look */
+.about-me-text {
+    text-align: left; /* Align text to the left */
+    max-width: 700px; /* Limit text width for better readability */
+}
+
+.about-me-text h3 {
+    margin-top: 30px; /* Add spacing above the headings */
 }
 
 #hobby h2 {
     text-align: center;
-    font-family: 'Pacifico', cursive; /* Use a fun, cursive font */
     font-size: 2em; /* Make it larger */
     color: #000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
@@ -168,13 +174,16 @@ p {
     border: 3px solid #106810;
 }
 
+#contact {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+
 /* Style the grid contact class */
 .grid-contact {
-    display: grid;
-    grid-template-columns: 40% 40%; /* Two columns, each 40% wide */
-    justify-content: space-around; /* Adjust horizontal spacing */
-    align-items: start; /* Align items to the start (top) of their grid area */
-    row-gap: 20px; /* Add spacing between rows */
+    max-width: 800px; /* Set a maximum width to prevent stretching on large screens */
+    width: 100%; /* Ensure the grid takes up full width on smaller screens */
 }
 
 .grid-contact .grid-contact-1 img {
@@ -193,7 +202,6 @@ p {
 
 .container-contact h2 {
     text-align: center;
-    font-family: 'Pacifico', cursive; /* Use a fun, cursive font */
     font-size: 2em; /* Make it larger */
     color: #000;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
@@ -203,7 +211,6 @@ p {
 .container-contact label {
     display: block;
     margin-bottom: 5px;
-    font-family: 'Georgia', serif; /* Use a serif font for a classic look */
 }
 
 .container-contact input, textarea {
@@ -224,15 +231,22 @@ p {
 }
 
 .container-contact .btn-submit {
-    font-family: 'Georgia', serif; /* Use a serif font for a classic look */
     background-color: #4CAF50;
     color: #000;
 }
 
 .container-contact .btn-reset {
-    font-family: 'Georgia', serif; /* Use a serif font for a classic look */
     background-color: #fff;
     color: #000;
+}
+
+#main_content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Mobile-first layout adjustments */
@@ -241,7 +255,6 @@ p {
 }
 
 .flex-hobbies {
-    flex-direction: column; /* Stack images vertically on mobile */
     align-items: center; /* Center images horizontally */
 }
 
@@ -254,22 +267,115 @@ p {
     grid-template-columns: 1fr; /* Single column for mobile */
 }
 
-/* Media query for larger screens (e.g., tablets and desktops) */
-@media (min-width: 768px) {
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    /* Adjust breakpoint as needed */
+    /* Styles for smaller screens */
+    nav ul {
+        display: none;
+        /* ... other mobile navigation styles ... */
+    }
+
     .grid-index {
-        grid-template-columns: 40% 40%; /* Two columns for larger screens */
+        grid-template-columns: 1fr;
     }
 
     .flex-hobbies {
-        flex-direction: row; /* Arrange images horizontally on larger screens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .flex-hobbies img {
-        width: 18%; /* Adjust image width for larger screens */
+        width: 80%;
+        max-width: 300px;
     }
 
     .grid-contact {
-        grid-template-columns: 40% 40%; /* Two columns for larger screens */
+        grid-template-columns: 1fr;
+    }
+
+    #main_content {
+        padding: 20px; /* Add some padding for smaller screens */
+    }
+
+    .grid-contact {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .container-contact {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .container-contact input,
+    .container-contact textarea {
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .container-contact button {
+        padding: 10px 15px; /* Adjust button padding for smaller screens */
+    }
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust breakpoints as needed */
+    /* Styles for tablets */
+    nav ul {
+        display: flex; /* Show navigation on tablets */
+    }
+
+    .grid-index {
+        grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    }
+
+    .flex-hobbies {
+        flex-direction: row;
+    }
+
+    .flex-hobbies img {
+        width: 30%; /* Adjust image width for tablets */
+    }
+
+    .grid-contact {
+        grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    }
+
+    #about_me {
+        flex-direction: row; /* Arrange image and text side-by-side on larger screens */
+    }
+
+    .about-me-content {
+        flex-direction: row;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .profile-image {
+        margin-right: 30px; /* Add spacing between image and text on larger screens */
+    }
+
+    .grid-contact {
+        grid-template-columns: 1fr; /* Still single column for tablets, adjust if needed */
+    }
+}
+
+/* Media query for larger screens (desktops) */
+@media (min-width: 992px) {
+    /* Adjust breakpoint as needed */
+    /* Styles for larger screens */
+    .grid-index {
+        grid-template-columns: repeat(2, 1fr); /* Three columns for desktops */
+    }
+
+    .flex-hobbies img {
+        width: 22%; /* Adjust image width for desktops */
+    }
+
+    .grid-contact {
+        grid-template-columns: 1fr 1fr; /* Two columns for desktops */
+    }
+
+    .grid-contact {
+        grid-template-columns: 1fr 1fr; /* Two columns for desktops */
     }
 }
 

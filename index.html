@@ -6,81 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is my introduce myself || My home page</title>
     <link rel="stylesheet" href="css/main-style.css">
-    <script>
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.querySelector(".back-to-top").classList.add("show");
-            } else {
-                document.querySelector(".back-to-top").classList.remove("show");
-            }
-        }
-    </script>
 </head>
 
 <body>
-<a href="#top" class="back-to-top">Back to Top</a>
+
 <header>
+    <a href="#top" class="back-to-top">Back to Top</a>
     <div class="banner">
         <img src="images/my-site-banner.jpg" alt="Banner Image Description Thanh Ngo">
     </div>
     <nav>
         <ul>
-            <li><a href="#main_content" class="active" title="My home">Home</a></li>
-            <li><a href="#to_about_me" title="About me">About me</a></li>
-            <li><a href="#contact" title="My contact">Contact</a></li>
+            <li><a href="#main_content" class="active" title="My home" aria-label="Home">Home</a></li>
+            <li><a href="#about_me" title="About me" aria-label="About Me">About me</a></li>
+            <li><a href="#contact" title="My contact" aria-label="Contact">Contact</a></li>
         </ul>
     </nav>
 </header>
+<main>
+    <article id="main_content">
+        <div class="grid-index">
+            <p>
+                In dawn's embrace, a journey starts,<br/>
+                Life's tapestry, with beating hearts.<br/>
+                A fragile flame, in tender bloom,<br/>
+                Nurtured in love's warm, sunlit room.<br/>
+                <br/>
+                Through winding paths, we strive and yearn,<br/>
+                Lessons learned, as seasons turn.<br/>
+                Joy and sorrow, hand in hand,<br/>
+                Moments cherished, etched in sand.<br/>
+                <br/>
+                From youthful dreams to wisdom's grace,<br/>
+                Time leaves its mark on every face.<br/>
+                In twilight's hush, reflections gleam,<br/>
+                A life well-lived, a peaceful dream.<br/>
+                <br/>
+                So let us dance, while stars ignite,<br/>
+                Embrace the day, the moonlit night.<br/>
+                For life's a gift, a fleeting art,<br/>
+                Love's melody, in every heart.<br/><br/>
+                <b>Source: Internet</b>
+            </p>
+            <p>
+                Leaves of gold whisper and fall, <br/>
+                A chilly breeze whispers its call.<br/>
+                Gray clouds paint the sky's vast dome,<br/>
+                A gentle drizzle finds its home.<br/>
+                <br/>
+                Swallows take flight, southward bound,<br/>
+                Seeking warmth on distant ground.<br/>
+                Golden fields of ripened grain,<br/>
+                Farmers rejoice, harvest's gain.<br/>
+                <br/>
+                On a quiet path, serene and lone,<br/>
+                A child's light footsteps are known.<br/>
+                A smile as bright as morning's ray,<br/>
+                Warming hearts along the way.<br/>
+                <br/>
+                Autumn brings a touch of sorrow's trace,<br/>
+                Yet hope's embrace fills every space.<br/>
+                Winter's chill will yield to spring's delight,<br/>
+                Life's vibrant hues will shine bright.<br/><br/>
+                <b>Source: Internet</b>
+            </p>
+        </div>
+    </article>
 
-<main id="main_content">
-    <div class="grid-index">
-        <img src="images/autumn-home.jpg" alt="Autumn in my home">
-        <p>
-            Leaves of gold whisper and fall, <br/>
-            A chilly breeze whispers its call.<br/>
-            Gray clouds paint the sky's vast dome,<br/>
-            A gentle drizzle finds its home.<br/>
-            <br/>
-            Swallows take flight, southward bound,<br/>
-            Seeking warmth on distant ground.<br/>
-            Golden fields of ripened grain,<br/>
-            Farmers rejoice, harvest's gain.<br/>
-            <br/>
-            On a quiet path, serene and lone,<br/>
-            A child's light footsteps are known.<br/>
-            A smile as bright as morning's ray,<br/>
-            Warming hearts along the way.<br/>
-            <br/>
-            Autumn brings a touch of sorrow's trace,<br/>
-            Yet hope's embrace fills every space.<br/>
-            Winter's chill will yield to spring's delight,<br/>
-            Life's vibrant hues will shine bright.<br/><br/>
-            <b>Source: Internet</b>
-        </p>
-    </div>
-</main>
-
-<main id="to_about_me">
     <section id="about_me">
         <h2>About Me</h2>
-        <p>Greetings! My name is Thanh Ngo, and I'm dedicated to inspiring the next generation of tech leaders as a
-            lecturer at FPT University. </p>
-        <ul>
-            <li>I strive to stay ahead of the curve by continuously learning about new technologies and their
-                applications.
-            </li>
-            <li>I'm passionate about teaching and inspiring students.</li>
-            <li>I believe that coding is a fundamental skill for the future and aim to instill a love for it in my
-                students.
-            </li>
-            <li>I'm always looking to expand my network and collaborate with individuals who are passionate about
-                shaping the future of technology.
-            </li>
-        </ul>
+        <div class="about-me-content">
+            <img src="images/puppy.jpg" alt="Photo of Thanh Ngo" class="profile-image">
+
+            <div class="about-me-text">
+                <p>Greetings! I'm Thanh Ngo, a passionate educator and tech enthusiast dedicated to empowering the next
+                    generation of tech leaders. As a lecturer at FPT University, I strive to create an engaging and
+                    inspiring learning environment where students can discover their potential and develop the skills
+                    necessary to thrive in the ever-evolving world of technology.</p>
+
+                <p>My teaching philosophy revolves around fostering a love for learning and encouraging students to
+                    embrace challenges. I believe that coding is more than just a skill; it's a powerful tool for
+                    creativity and problem-solving. I'm committed to providing my students with the knowledge, guidance,
+                    and support they need to succeed in their academic and professional journeys.</p>
+
+                <h3>Areas of Expertise</h3>
+                <ul>
+                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>Mobile App Development</li>
+                    <li>Database Management</li>
+                    <li>Software Engineering Principles</li>
+                </ul>
+
+                <h3>Interests</h3>
+                <p>Beyond the classroom, I'm an avid learner who enjoys exploring emerging technologies and their
+                    potential impact on society. I'm also passionate about fostering a strong tech community and
+                    actively seek opportunities to connect and collaborate with fellow educators and industry
+                    professionals.</p>
+            </div>
+        </div>
     </section>
     <section id="hobby">
         <h2>What I Enjoy</h2>
@@ -92,31 +115,45 @@
             <img src="images/puppy.jpg" alt="hobby 5's play with pet" title="hobby 5's play with pet">
         </div>
     </section>
-</main>
 
-<main id="contact">
-    <div class="grid-contact">
-        <div class="container-contact">
-            <h2>Contact me</h2>
-            <form>
-                <label for="name">Fullname:</label>
-                <input type="text" id="name" name="name" required>
+    <section id="contact">
+        <div class="grid-contact">
+            <div class="container-contact">
+                <h2>Contact me</h2>
+                <form>
+                    <label for="name">Fullname:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
 
-                <button type="submit" class="btn-submit">Send</button>&nbsp;
-                <button type="reset" class="btn-reset">Cancel</button>
-            </form>
+                    <button type="submit" class="btn-submit">Send</button>&nbsp;
+                    <button type="reset" class="btn-reset">Cancel</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 </main>
-
 <footer>
     <p>Website Written By &copy; 2024 ThanhNG4 in Coursera</p>
 </footer>
+
+<script>
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.querySelector(".back-to-top").classList.add("show");
+        } else {
+            document.querySelector(".back-to-top").classList.remove("show");
+        }
+    }
+</script>
+
 </body>
 </html>
